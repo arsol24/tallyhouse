@@ -63,6 +63,15 @@
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
   footer p { margin: 6px 0; }
   .soon { color: var(--muted); font-size: 15px; }
+  .kits { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+  .kit { display: block; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; text-decoration: none; color: var(--ink); transition: box-shadow .15s, transform .15s; }
+  .kit:hover { box-shadow: 0 12px 30px rgba(0,0,0,.10); transform: translateY(-2px); }
+  .kit img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .kit div { padding: 14px 16px 18px; }
+  .kit b { display: block; font-size: 18px; }
+  .kit span { color: var(--muted); font-size: 15px; }
+  .kit.free { border-color: #1D5C7A; }
+  .kit.free b { color: #1D5C7A; }
   @media (max-width: 820px) {
     .hero .wrap, .two { grid-template-columns: 1fr; }
     .hero { padding: 44px 0 52px; }
@@ -98,7 +107,20 @@
   </div>
 </div>
 
-<section>
+<section class="soft" style="padding:48px 0">
+  <div class="wrap">
+    <h2>Pick the kit for your trade</h2>
+    <p class="lead" style="margin-bottom:24px">Each kit is set up with the services, expense categories and words your trade uses. $7.99 each, one-time.</p>
+    <div class="kits">
+      <a class="kit" href="#inside"><img src="https://uploads.polar.sh/product_media/57fff600-fe57-4302-9b4a-72690bc0f3e9/b4249ca4-3d25-4c3f-9d2f-e79630bddc92/01-hero.png" alt="Cleaning business dashboard" loading="lazy"><div><b>Cleaning business</b><span>Clients, jobs, expenses, mileage and profit</span></div></a>
+      <a class="kit" href="dog-walking.html"><img src="images/dog-hero.png" alt="Dog walking business dashboard" loading="lazy"><div><b>Dog walking &amp; pet sitting</b><span>Owners, visits, expenses, mileage and profit</span></div></a>
+      <a class="kit" href="personal-trainer.html"><img src="images/trainer-hero.png" alt="Personal trainer dashboard" loading="lazy"><div><b>Personal training</b><span>Prepaid packs, sessions, clients and profit</span></div></a>
+      <a class="kit free" href="free-tracker.html"><img src="images/free-hero.png" alt="Free Who Owes Me tracker" loading="lazy"><div><b>Free: Who Owes Me</b><span>A free unpaid jobs tracker for any trade</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="inside">
   <div class="wrap">
     <h2>What's inside</h2>
     <p class="lead">Seven ready-to-use tabs, already set up with real cleaning services and expense categories. Just add your numbers.</p>
@@ -167,13 +189,14 @@
       <p>Cleaning Business Back Office · launch price $7.99 one-time · instant download</p>
       <a class="btn" href="https://buy.polar.sh/polar_cl_BzkFCxKnSYn3dk0wBUP4XXzMdbUdvzxMtRgRL36Jok4">Get the spreadsheet</a>
     </div>
-    <p class="soon" style="text-align:center;margin-top:24px">Walk dogs or pet sit? Get the <a href="https://buy.polar.sh/polar_cl_VdBTn4jRhKTRBHAFGkXfWbb9hiRJ1hfWFxouo17mmaQ">Dog Walking Business Back Office</a> (owners, visits, mileage and profit, $7.99).<br>Personal trainer? Get the <a href="https://buy.polar.sh/polar_cl_7sQTXrtSSCKhLLTXwIVHgLEFJ30S77YAoXjcL1O8pbU">Personal Trainer Business Back Office</a> (prepaid packs, sessions, clients and profit, $7.99).</p>
+    <p class="soon" style="text-align:center;margin-top:24px">Walk dogs or pet sit? See the <a href="dog-walking.html">Dog Walking Business Back Office</a>.<br>Personal trainer? See the <a href="personal-trainer.html">Personal Trainer Business Back Office</a>.<br>Not ready yet? Start with the <a href="free-tracker.html">free Who Owes Me tracker</a>.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <p><b>Tallyhouse</b> · simple back-office kits for people who run their own show.</p>
+    <p>Kits: <a href="./">Cleaning</a> · <a href="dog-walking.html">Dog walking</a> · <a href="personal-trainer.html">Personal training</a> · <a href="free-tracker.html">Free tracker</a></p>
     <p>Free guides: <a href="cleaning-business-expenses.html">Cleaning business expense list</a> · <a href="dog-walking-prices.html">How much to charge for dog walking</a></p>
     <p>Payments are handled securely by Polar, our merchant of record, which also takes care of sales tax and VAT.</p>
     <p>Digital download: nothing is shipped. Templates organise your numbers; they are not tax, legal or financial advice.</p>
